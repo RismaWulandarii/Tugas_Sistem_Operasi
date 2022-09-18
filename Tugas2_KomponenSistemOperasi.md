@@ -48,10 +48,20 @@ Jika perintah pada gambar diatas dieksekusi, hasilnya adalah aplikasi cron(379) 
 Untuk mengetahui bagaimana informasi status suatu aplikasi dengan detail, dapat menggunakan "systemctl status".
 
 ![Gambar1](/img/Langkah5.1.PNG)
-
+***
 
 ## 2. Manajemen Memori,
+Manajemen memori adalah mekanisme yang berada didalam sistem operasi untuk mengatur, mengelola, dan juga melihat proses didalam memori tersebut. Untuk dapat melihat manajemen memori dapat menggunakan perintah atau kode sebagai berikut:
+## 1. "free"
 
+![Gambar](/img/Langkah1.2.PNG)
+Pada gambar diatas dapat dilihat secara ringkas rincian memori yang terpakai.
+Untuk melihat lebih jelas lagi rincian memori yang ada dapat menggunakan:
+
+![Gambar](/img/Langkah2.2.PNG)
+
+Terlihat pada gambar diatas, dengan mengetikkan perintah cat /proc/meminfo maka akan keluar rincian total penggunaan memori.
+***
 
 ## 3. Manajamen Sistem Berkas
 Contoh manajemen sistem berkas diantaranya adalah membuat direktori, menghapus direktori, membuat file di dalam direktori dan juga menghapus file dalam direktori.
@@ -80,10 +90,55 @@ Terlihat jelas bukan perbedaan membuat direktori di Linux dengan menggunakan ter
 ## * Menghapus Direktori beserta File-File didalamnya
 
 ![Gambar1](/img/Langkah8.3.PNG)
+***
 
 ## 4. Manajemen Masukan/Keluaran
 
+Apa yang kita ketik di terminal termasuk input dan yang keluar dari terminal namanya output. Input tidak harus ada di terminal, begitu juga output. Input dan output bisa berupa file. Jenis input di Linux ada dua yaitu file dan terminal (stdin). Sedangkan jenis output ada tiga yaitu file, output di terminal (stdout), dan output terminal kalau error (stderr).
+
+## 1. File descriptor
+## * Output ke layar (standar output), input dari system (kernel)
+![Gambar](/img/Langkah3.2.PNG)
+
+ps adalah input yang sudah ada dari system.
+
+## * Output ke layar (standar output), input dari keyboard (standar input)
+![Gambar](/img/Langkah4.2.PNG)
+
+perintah cat akan meminta inputan dari keyboard dan selanjutnya akan di tampilkan di layar (akan dijadikan sebagai output).<br>
+Contohnya disini saya mengetikkan kalimat "Hallo, nama saya Risma Wulandari", ketika di Enter akan keluar output yang sama seperti dengan yang kita inputkan, yaitu "Hallo, nama saya Risma Wulandari".<br>
+Untuk keluar dari cat cukup ketikkan __Ctrl+D__
+
+## * Input nama direktori, output tidak ada (membuat direktori baru), bila terjadi error maka tampilan error pada layar (standar output)
+
+Perintah mkdir adalah perintah untuk membuat suatu dirktori, contohnya disini saya membuat direktori mydir.
+
+![Gambar](/img/Langkah5.2.PNG)
+
+perintah ls -l akan menampilkan direktori apa saja yang ada. Dan direktori mydir yang tadi dibuat sudah ada.
+
+## 2. Pembelokan (redirection)
+## * Pembelokan standar output
+![Gambar](/img/Langkah6.2.PNG)
+
+Kita ketikkan cat 1> myfile.txt maka kita akan membuat suatu file bernama myfile.txt. Kemudian untuk menampilkan isi filenya ketikkan cat myfile.txt.
+
+## * Pembelokan standar error untuk disimpan di file
+
+![Gambar](/img/Langkah7.2.PNG)
+
+Ketika kita mengetikkan perintah mkdir mydir, output yang keluar adalah error karena direktori mydir sudah tersedia. Sekarang dengan menggunakan perintah "mkdir mydir 2> myerror.txt" yang akan terjadi adalah pesan error yang muncul tadi akan dimasukkan kedalam file baru yang bernama myerror.txt.
+
+## * Notasi 2>&1 : pembelokan standar error (2>) adalah identik dengan file descriptor 1.
+
+![Gambar](/img/Langkah8.2.PNG)
+
+Ketika diketikkan 'ls filebaru', maka akan muncul pesan error.<br>Lalu ketikkan 'ls filebaru 2> out.txt'. Yang akan terjadi adalah, pesan error tadi akan masuk kedalam file baru bernama 'out.txt'.<br>
+Lalu jika kita ketikkan 'ls filebaru 2> out.txt 2>&1' maka yang akan terjadi adalah perintah tersebut akan menghapus isi dari file 'out.txt'.
+***
+
 > # Layanan Sistem Operasi
+
 
 > # System Call
 
