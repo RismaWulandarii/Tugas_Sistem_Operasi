@@ -138,7 +138,18 @@ Lalu jika kita ketikkan 'ls filebaru 2> out.txt 2>&1' maka yang akan terjadi ada
 ***
 
 > # Layanan Sistem Operasi
+## 1. Deteksi Error
+Sistem operasi harus selalu waspada terhadap kemungkinan error. Error dapat terjadi di __CPU dan memori perangkat keras__, __Masukan/Keluaran__, dan __di dalam program yang dijalankan pengguna__. Untuk setiap jenis error __sistem operasi harus bisa__ mengambil langkah yang tepat untuk mempertahankan jalannya proses komputasi. Misalnya dengan __menghentikan__ jalannya program, __mencoba kembali__ melakukan operasi yang dijalankan, atau __melaporkan kesalahan__ yang terjadi agar pengguna dapat mengambil langkah selanjutnya.
+![Gambar](/img/Langkah3-2.PNG)
 
+## 2. Proteksi
+Layanan proteksi memastikan bahwa segala akses ke sumber daya terkontrol. Dan tentu saja keamanan terhadap gangguan dari luar sistem tersebut. Keamanan bisa saja dilakukan dengan terlebih dahulu mengidentifikasi pengguna. Ini bisa dilakukan dengan meminta password bila ingin menggunakan sumber daya. Contohnya, ketika kita ingin masuk ke dalam super user, kita selalu diminta memasukkan password terlebih dahulu.
+![Gambar](/img/Langkah3-1.PNG)
+
+## 3. Pembuatan Program
+Sistem operasi menyediakan berbagai fasilitas yang membantu programer dalam membuat program seperti editor. Walaupun bukan bagian dari sistem operasi, tapi layanan ini diakses melalui sistem operasi. Contohnya pada Linux ada teks editor nano.
+![Gambar](/img/Langkah3-3.PNG)
+***
 
 > # System Call
 
