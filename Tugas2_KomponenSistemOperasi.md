@@ -152,5 +152,31 @@ Sistem operasi menyediakan berbagai fasilitas yang membantu programer dalam memb
 ***
 
 > # System Call
+System call adalah tata cara pemanggilan di program aplikasi untuk memperoleh layanan yang disediakan oleh sistem operasi. System call berupa rutin sistem operasi untuk keperluan tertentu yang spesifik. System Call untuk manajemen proses diperlukan untuk mengatur proses-proses yang sedang berjalan. System calls yang berhubungan dengan berkas sangat diperlukan. Seperti ketika kita ingin membuat atau menghapus suatu berkas. Atau ketika ingin membuka atau menutup suatu berkas yang telah ada, membaca berkas tersebut, dan menulis berkas itu. System calls juga diperlukan ketika kita ingin mengetahui atribut dari suatu berkas atau ketika kita juga ingin merubah atribut tersebut. Yang termasuk atribut berkas adalah nama berkas, jenis berkas, dan lain-lain.
 
+## * Membuat Direktori di Linux menggunakan cara manual
+
+![Gambar1](/img/Langkah1.3.PNG)
+
+![Gambar1](/img/Langkah2.3.PNG)
+
+## * Membuat Direktori di Linux menggunakan terminal
+
+![Gambar1](/img/Langkah3.3.PNG)
+
+![Gambar1](/img/Langkah4.3.PNG)
+
+Terlihat jelas bukan perbedaan membuat direktori di Linux dengan menggunakan terminal dan yang tidak. Bagi orang yang sudah mahir dan terbiasa menggunakan Linux, operasi-operasi atau perintah yang ingin dilakukan akan lebih mudah dan cepat dengan mengetikkan beberapa kode perintahnya di terminal. Sehingga penggunaan terminal pada OS ini sangat vital.
+
+## * Membuat File didalam Direktori / Direktori didalam Direktori
+
+![Gambar1](/img/Langkah5.3.PNG)
+
+![Gambar1](/img/Langkah6.3.PNG)
+
+![Gambar1](/img/Langkah7.3.PNG)
+
+## * Menghapus Direktori beserta File-File didalamnya
+
+![Gambar1](/img/Langkah8.3.PNG)
 
