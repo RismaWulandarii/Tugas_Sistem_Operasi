@@ -7,11 +7,17 @@
 ## 7.2. STRUKTUR SEDERHANA ATAU MONOLITHIC
 
 <p align="justify">Struktur sistem operasi di sistem ini tidak terstruktur. Sistem operasi sebagai kumpulan prosedur yang masing-masing dapat saling dipanggil jika dibutuhkan. Setiap prosedur yang ada di dalam sistem ini mempunyai <i>interface</i> yang sudah didefinisikan dengan baik. Dalam hal ini berupa parameter dan hasilnya, serta masing-masing prosedur bebas untuk saling memanggil jika dibutuhkan. Walaupun disebut tidak berstruktur, sebenarnya sistem monilisthic tetap mempunyai struktur
-walaupun kecil dan mendasar.<br><br>
+walaupun kecil dan mendasar. Seringkali, sistem seperti itu dimulai sebagai sistem kecil, sederhana, dan terbatas dan kemudian berkembang
+melampaui cakupan aslinya.<br><br>
 Contoh dari sistem operasi ini adalah <b>bMS-DOS</b> dan <b>UNIX</b>, dengan ciri khas:</p>
 
+<p align="center"><img src="img/StrukturLapisanMS-DOS.PNG"></p>
+
 * __MS DOS__ = fokus pada fungsionalitas tertentu dan tidak dapat dibagi dalam beberapa modul.
+
 * __UNIX__ = fokus pada setiap prosedur yang memanggil prosedur lainnya, sehingga menyebabkan tiap prosedur dapat saling berkomunikasi dan kernel berisikan semua layanan yang disediakan oleh sistem ke pengguna.
+
+<p align="center"><img src="img/UNIXTradisonal.PNG"></p>
 
 <p align="justify">Struktur sistem operasi monolitik hanya dapat digunakan pada beberapa perangkat keras saja. Hal ini disebabkan karena sistem operasi monolitik dilengkapi dengan operasi <i>dual mode</i> dan pelayanan <i>System call</i>. Namun, Intel 8088 tidak dapat menggunakan <i>dual mode</i> sehingga tidak akan ada proteksi pada perangkat keras yan digunakan.<br>Secara umum, <i>system call</i> pada sistem operasi monolitik dibuat dengan cara:</p>
 
@@ -33,6 +39,10 @@ Contoh dari sistem operasi ini adalah <b>bMS-DOS</b> dan <b>UNIX</b>, dengan cir
 
 <p align="center"><img src="img/SO-2.PNG"></p>
 <p align="center">Gambar Struktur Berlapis</p>
+
+<p align="justify">Suatu sistem dapat dibuat modular dengan banyak cara. Salah satu metodenya adalah pendekatan berlapis, di mana sistem operasi dipecah menjadi beberapa lapisan (level). Lapisan bawah (lapisan 0) adalah perangkat keras; tertinggi (lapisanN) adalah antarmuka pengguna. Struktur layering ini digambarkan pada Gambar 2.13.</p>
+
+<p align="center"><img src="img/SistemOperasiBerlapis.PNG"></p>
 
 <p align="justify">Sistem berlapis banyak digunakan karena dapat mengurangi kompleksitas rancangan dari implementasi sebuah sistem operasi. Setiap lapisan struktur tersebut berasal dari hasil implementasi objek abstrak. Kondisi ini menyebabkan hasil implementasi berasal dari data yang terenkapsul dan operasu yang dapat dimanipulasi. Salah satu contoh struktur sistem berlapis adalah <i>The System</i>.<br></p>
 
@@ -59,6 +69,9 @@ Lapisan ke-5 hingga ke-7, sistem operasi sudah berhubungan dengan prosesor.<br>
 
 Selanjutnya dari lapisan ke-8 hingga 13, sistem operasi berhubungan dengan media penyimpanan maupun perlatan-peralatan
 lain yang ditancapkan, misalnya peralatan jaringan.</p>
+
+<p align="justify">Keuntungan utama dari pendekatan berlapis adalah kesederhanaan konstruksi dan debugging. Lapisan dipilih sehingga masing-masing menggunakan fungsi (operasi) dan layanan hanya lapisan tingkat yang lebih rendah. Pendekatan ini menyederhanakan debugging dan verifikasi sistem. Lapisan pertama dapat di-debug tanpa memperhatikan
+sisa sistem, karena, menurut definisi, hanya menggunakan perangkat keras dasar (yang dianggap benar) untuk mengimplementasikan fungsinya. Setelah lapisan pertama didebug, fungsinya yang benar dapat diasumsikan sementara lapisan kedua di-debug, dan seterusnya. Jika kesalahan ditemukan selama debugging lapisan tertentu, kesalahan harus pada lapisan itu, karena lapisan di bawahnya sudah di-debug. Dengan demikian, desain dan implementasi sistem disederhanakan.</p>
 
 ## 7.4. MIKRO KERNEL
 
