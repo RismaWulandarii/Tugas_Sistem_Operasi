@@ -37,7 +37,7 @@ Contoh dari sistem operasi ini adalah <b>bMS-DOS</b> dan <b>UNIX</b>, dengan cir
 
 <p align="justify">Sistem operasi berlapis memiliki beberapa lapis yang beragam, mulai dari bagian atas hingga bagian bawah. Masing-masing lapisan ini memiliki fungsi dan tujuannya tersendiri yang saling mendukung satu sama lain. Lapisan paling bawah digunakan untuk perangkat keras, sedangkan lapisan paling atas digunakan untuk <i>user interface.</i><br></p>
 
-<p align="center"><img src="img/SO-2.PNG"></p>
+<p align="center"><img src="img/SO-2.png"</p>
 <p align="center">Gambar Struktur Berlapis</p>
 
 <p align="justify">Suatu sistem dapat dibuat modular dengan banyak cara. Salah satu metodenya adalah pendekatan berlapis, di mana sistem operasi dipecah menjadi beberapa lapisan (level). Lapisan bawah (lapisan 0) adalah perangkat keras; tertinggi (lapisanN) adalah antarmuka pengguna. Struktur layering ini digambarkan pada Gambar 2.13.</p>
